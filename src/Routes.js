@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
   Route,
@@ -10,8 +9,9 @@ import About from "./components/About";
 import Home from "./pages/HomeController";
 import NotFound from "./components/NotFound";
 
-const Root = (
-  <Router>
+function Routes() {
+  return (
+    <Router>
     <Switch>
       <Route path="/" component={Home} exact={true} />
       <Route path="/Home" component={Home} exact={true} />
@@ -19,10 +19,7 @@ const Root = (
       <Route component={NotFound} />
     </Switch>
   </Router>
-);
+  );
+}
 
-
-ReactDOM.render(
-  <Root/>,
-  document.getElementById("root")
-);
+export default Routes;

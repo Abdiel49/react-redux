@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 
-const About = () => {
+const About = (props) => {
+  console.log(props.suggestions)
   return(
     <div>
-    <h1>Este es un Abouth</h1>
-    <Link to='/'> Ir a Home</Link>
+      <h1>Este es un Abouth</h1>
+      <Link to='/'> Ir a Home</Link>
+      <p> {props.suggestions} </p>
+      <p> {} </p>
     </div>
   );
 };
